@@ -1,0 +1,68 @@
+<div class="modal-container">
+<div class="add-modal-header">
+  Add User
+</div>
+
+<div class="add-modal-body">
+  <div class="add-user">
+    <div class="credentials">
+        <div class="title">
+          First Name
+        </div>
+        <div class="content">
+          <input v-model="firstName" class="borderless"></input>
+        </div>
+    </div>
+    <div class="credentials">
+      <div class="title">
+        Last Name
+      </div>
+      <div class="content">
+        <input v-model="lastName" class="borderless"></input>
+      </div>
+    </div>
+    <div class="credentials">
+        <div class="title">
+          Email Id
+        </div>
+        <div class="content">
+          <input v-model="email" class="borderless"></input>
+        </div>
+    </div>
+    <div class="credentials">
+      <div class="title">
+        User Name
+      </div>
+      <div class="content">
+        <input v-model="userName" class="borderless"></input>
+      </div>
+    </div>
+    <div class="credentials">
+        <div class="title">
+          Password
+        </div>
+        <div class="content">
+          <input v-model="password"  class="borderless"></input>
+        </div>
+    </div>
+    <div class="credentials">
+        <div class="title">
+          Is Admin ?
+        </div>
+        <div class="admin">
+        <input type="radio" v-model="isAdmin" name="role" value="yes"> Yes </input>&nbsp;
+        <input type="radio" v-model="isAdmin" name="role" value="no"> No </input>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="add-modal-footer">
+  <button class="btn modal-cancel-button" @click="$emit('closeModal')">
+    Cancel
+  </button>
+  <button class="btn modal-save-button" @click="createUser">
+    Sign In
+  </button>
+</div>
+</div>

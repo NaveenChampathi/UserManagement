@@ -1,0 +1,7 @@
+<transition name="modal">
+  <div class="modal-mask">
+    <div class="modal-wrapper">
+      <component v-on:closeModal="$emit('closeModal')" :is="modalComp"></component>
+    </div>
+  </div>
+</transition>

@@ -1,0 +1,18 @@
+<div class="app-layout">
+  <header class="header">
+    <nav class="navbar navbar-light bg-faded">
+    <div>
+      <div class="header-text">
+        <span> user management</span>
+      </div>
+      <div class="form-right">
+        <button class="apply-btn" >{{logInOut}}</button>
+      </div>
+    </div>
+  </nav>
+  </header>
+  <div class="app-content">
+    <permissions v-if="showPermissions" v-on:showModal="updateModal" :permissions="permissions"></permissions>
+  </div>
+  <modal v-on:closeModal="closeModal" v-if="showModal" :modalComp="modalContentComp"></modal>
+</div>
